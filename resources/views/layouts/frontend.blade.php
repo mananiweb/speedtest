@@ -97,6 +97,11 @@
                                             {{ trans('cruds.user.title') }}
                                         </a>
                                     @endcan
+                                    @can('inernet_speed_data_access')
+                                        <a class="dropdown-item" href="{{ route('frontend.inernet-speed-datas.index') }}">
+                                            {{ trans('cruds.inernetSpeedData.title') }}
+                                        </a>
+                                    @endcan
 
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

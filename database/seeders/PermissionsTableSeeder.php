@@ -76,6 +76,18 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 17,
+                'title' => 'inernet_speed_data_create',
+            ],
+            [
+                'id'    => 18,
+                'title' => 'inernet_speed_data_show',
+            ],
+            [
+                'id'    => 19,
+                'title' => 'inernet_speed_data_access',
+            ],
+            [
+                'id'    => 20,
                 'title' => 'profile_password_edit',
             ],
         ];
