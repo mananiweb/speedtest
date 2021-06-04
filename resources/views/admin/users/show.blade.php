@@ -84,6 +84,22 @@
     </div>
 </div>
 
-
+<div class="card">
+    <div class="card-header">
+        {{ trans('global.relatedData') }}
+    </div>
+    <ul class="nav nav-tabs" role="tablist" id="relationship-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="#user_inernet_speed_datas" role="tab" data-toggle="tab">
+                {{ trans('cruds.inernetSpeedData.title') }}
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" role="tabpanel" id="user_inernet_speed_datas">
+            @includeIf('admin.users.relationships.userInernetSpeedDatas', ['inernetSpeedDatas' => $user->userInernetSpeedDatas])
+        </div>
+    </div>
+</div>
 
 @endsection
