@@ -20,7 +20,9 @@ class UsersController extends Controller
 
         $users = User::with(['roles'])->get();
 
-        return view('admin.users.index', compact('users'));
+        $roles = Role::get();
+
+        return view('admin.users.index', compact('users', 'roles'));
     }
 
     public function create()

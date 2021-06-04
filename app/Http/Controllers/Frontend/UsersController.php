@@ -20,7 +20,9 @@ class UsersController extends Controller
 
         $users = User::with(['roles'])->get();
 
-        return view('frontend.users.index', compact('users'));
+        $roles = Role::get();
+
+        return view('frontend.users.index', compact('users', 'roles'));
     }
 
     public function create()
@@ -63,7 +65,7 @@ class UsersController extends Controller
     {
         abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $user->load('roles');
+        $user->load('roles', 'userInernetSpeedDatas');
 
         return view('frontend.users.show', compact('user'));
     }
